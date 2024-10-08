@@ -31,8 +31,7 @@ const startHandler = async (ctx) => {
   // Initial message
   const initialMessage = `Dear ${username}, 🎡 Welcome to TON Spin! 🎉!
 
-Our TON Spin Mini App lets you easily try your luck and score exclusive rewards like Telegram numbers, TON tokens, and unique @names—all in just a few easy steps.
-
+Our TON Spin Mini App lets you easily try your luck and score exclusive rewards.
 How it works 🤔❓  
 1. Start the bot and follow the simple instructions. 
 2. Spin the wheel to see what prize you win! 🎡💎  
