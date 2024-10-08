@@ -31,23 +31,24 @@ const startHandler = async (ctx) => {
   // Initial message
   const initialMessage = `Dear ${username}, 🎡 Welcome to TON Spin! 🎉!
 
-Our TON Spin Mini App lets you easily try your luck and score exclusive rewards.
+
 How it works 🤔❓  
 1. Start the bot and follow the simple instructions. 
 2. Spin the wheel to see what prize you win! 🎡💎  
-3. Claim your rewards instantly and enjoy your winnings.`;
+3. Claim your rewards instantly and enjoy your winnings.
 
-  // Local image path (ensure this is the correct path to the image)
-  const mainImage = fs.createReadStream('ton.png');
+Join now and start spinning to win incredible prizes today! 💎🎉`;
 
-  // Send the image with the initial message and inline button together
-  await ctx.telegram.sendPhoto(chatId, { source: mainImage }, {
-    caption: initialMessage,
-    parse_mode: 'Markdown', // Optional for formatting
-    reply_markup: Markup.inlineKeyboard([
-      [{ text: '🎡 START APP', web_app: { url: WEB_APP_URL } }]
-    ])
-  });
+  // Local image path
+  const mainImage = 'ton.png';
+
+  // Send the image first
+  await ctx.replyWithPhoto({ source: mainImage });
+
+  // Send the initial message with the inline button that opens the web app inside Telegram
+  await ctx.reply(initialMessage, Markup.inlineKeyboard([
+    [{ text: '🎡 START APP', web_app: { url: WEB_APP_URL } }]
+  ]));
 
   // Check if the user has already received the start message
   if (!sentMessages[chatId]) {
