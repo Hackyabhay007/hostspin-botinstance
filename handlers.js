@@ -35,9 +35,7 @@ Our TON Spin Mini App lets you easily try your luck and score exclusive rewards.
 How it works 🤔❓  
 1. Start the bot and follow the simple instructions. 
 2. Spin the wheel to see what prize you win! 🎡💎  
-3. Claim your rewards instantly and enjoy your winnings.
-
-Join now and start spinning to win incredible prizes today! 💎🎉`;
+3. Claim your rewards instantly and enjoy your winnings.`;
 
   // Local image path
   const mainImage = 'ton.png';
