@@ -37,12 +37,13 @@ How it works 🤔❓
 2. Spin the wheel to see what prize you win! 🎡💎  
 3. Claim your rewards instantly and enjoy your winnings.`;
 
-  // Local image path
-  const mainImage = 'ton.png';
+  // Local image path (ensure this is the correct path to the image)
+  const mainImage = fs.createReadStream('ton.png');
 
   // Send the image with the initial message and inline button together
   await ctx.telegram.sendPhoto(chatId, { source: mainImage }, {
     caption: initialMessage,
+    parse_mode: 'Markdown', // Optional for formatting
     reply_markup: Markup.inlineKeyboard([
       [{ text: '🎡 START APP', web_app: { url: WEB_APP_URL } }]
     ])
