@@ -39,11 +39,7 @@ How it works 🤔❓
 
 Join now and start spinning to win incredible prizes today! 💎🎉`;
 
-  // Local image path
-  const mainImage = 'ton.png';
 
-  // Send the image first
-  await ctx.replyWithPhoto({ source: mainImage });
 
   // Send the initial message with the inline button that opens the web app inside Telegram
   await ctx.reply(initialMessage, Markup.inlineKeyboard([
